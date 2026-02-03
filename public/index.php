@@ -2,8 +2,19 @@
 
 declare(strict_types=1);
 
+// Load configuration
+$config = require __DIR__ . '/../config.php';
+$allowedOrigins = $config['allowed_origins'] ?? [];
+
+// Determine CORS origin header
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (empty($allowedOrigins)) {
+    header('Access-Control-Allow-Origin: *');
+} elseif (in_array($origin, $allowedOrigins, true)) {
+    header('Access-Control-Allow-Origin: ' . $origin);
+}
+
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
