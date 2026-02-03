@@ -24,8 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-// Database path (one level up from public folder)
-$dbPath = __DIR__ . '/../logs.db';
+// Database path
+$dbPath = $config['db_path'] ?? (__DIR__ . '/../logs.db');
 
 // Get server data
 $microtime = microtime(true);

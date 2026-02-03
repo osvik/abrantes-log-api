@@ -16,7 +16,9 @@ Simple PHP (no framework) endpoint that logs incoming requests to an SQLite data
    sqlite3 logs.db < create.sql
    ```
 
-3. Ensure the PHP/web-server user can write to `logs.db` (and the repo folder, if needed).
+3. Configure the allowed origins and database path in `config.php`.
+4. Ensure the PHP/web-server user can write to `logs.db` (and the repo folder, if needed).
+
 
 ## Endpoint
 

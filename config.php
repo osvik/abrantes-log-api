@@ -7,4 +7,5 @@ return [
     // If empty, Access-Control-Allow-Origin: * will be used
     // Example: ['https://example.com', 'https://app.example.com']
     'allowed_origins' => [],
+    'db_path' => __DIR__ . '/logs.db',
 ];
