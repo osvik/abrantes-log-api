@@ -40,7 +40,10 @@ Missing parameters are stored as an empty string in the database.
 Example:
 
 ```sh
-curl "http://localhost/?event=example_event&ab_test_data=example_test-1&experiment_name=example_test&variant_name=v1&url=http%3A%2F%2Fexample.com&note=lorem+ipsum"
+cd abrantes-log-api
+cd public
+
+curl "http://localhost:8080/?event=example_event&ab_test_data=example_test-1&experiment_name=example_test&variant_name=v1&url=http%3A%2F%2Fexample.com&note=lorem+ipsum"
 ```
 
 ## What gets logged
